@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-q_us18_z)wjr$^h@hi2tp4n4@zg6$1m*a9a&b#ofsn-&0#*(sv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
+
+CSRF_TRUSTED_ORIGINS = ['https://8000-lime-urial-m55eohks.ws-eu25.gitpod.io']
 
 
 # Application definition
@@ -66,6 +68,7 @@ TEMPLATES = [
         },
     },
 ]
+SITE_ID = 1 
 
 WSGI_APPLICATION = 'kindness.wsgi.application'
 
