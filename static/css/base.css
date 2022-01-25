@@ -2,3 +2,16 @@
 {
     padding-top: 1rem;
 }
+.page-head
+{
+    font-family: 'Dancing Script', cursive;
+    font-weight: 100;
+    font-size: 4rem;
+    margin-top: 4rem;
+    color: #339989;
+}
+.page-subhead
+{
+    font-family: 'Bitter', serif;
+    font-size:1.5rem;
+}
