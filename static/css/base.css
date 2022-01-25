@@ -4,7 +4,7 @@
     --purple: #5E2BFF;
     --darkgreen: #339989;
     --green:#7DE2D1;
-    --lightgreen: #CAFFB9;
+    --lightgreen: #941C2F;
   }
 
 .landingsection
@@ -32,12 +32,47 @@
 .section{
     padding-top: 4rem;
 }
-p{
+.section-text{
     font-family: 'Bitter', serif;
     font-size: 1.2rem;
 }
-h2
+.sectionhead
 {
     font-family: 'Roboto', sans-serif;
     font-size: 2rem;
+    letter-spacing:3px;
+}
+.headingcontainer
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:100%;
+
+}
+.fa-heart
+{
+    color: var(--purple);
+}
+.how-icons
+{
+    color:var(--lightgreen);
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.how
+{
+    font-family: 'Roboto', sans-serif;
+    font-weight:300;
+    color:var(--green);
+    text-align: center;
+    padding-bottom: 1rem;
+}
+.hsmall
+{
+    font-family: 'Bitter', serif;
+    text-align: center;
+    color:black;
 }
