@@ -1,21 +1,11 @@
-* {
-    box-sizing: border-box;
-   }
-   *:before,
-   *:after {
-    box-sizing: border-box;
-   }
-   html,
-   body {
-    height: 100%;
-    position: relative;
-   }
-
-   footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-   }
+:root {
+    /*p for primary, s for secondary, t for tertiary*/
+    --darkpurple:#160C28;
+    --purple: #5E2BFF;
+    --darkgreen: #339989;
+    --green:#7DE2D1;
+    --lightgreen: #CAFFB9;
+  }
 
 .landingsection
 {
@@ -35,3 +25,19 @@
     font-size:1.5rem;
 }
 
+.nav-link
+{
+    color: var(--darkpurple)!important;
+}
+.section{
+    padding-top: 4rem;
+}
+p{
+    font-family: 'Bitter', serif;
+    font-size: 1.2rem;
+}
+h2
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+}
