@@ -1,6 +1,25 @@
+* {
+    box-sizing: border-box;
+   }
+   *:before,
+   *:after {
+    box-sizing: border-box;
+   }
+   html,
+   body {
+    height: 100%;
+    position: relative;
+   }
+
+   footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+   }
+
 .landingsection
 {
-    padding-top: 1rem;
+    padding-top: 2rem;
 }
 .page-head
 {
@@ -15,3 +34,4 @@
     font-family: 'Bitter', serif;
     font-size:1.5rem;
 }
+
