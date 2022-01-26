@@ -104,3 +104,16 @@
     font-size: 2rem;
     padding-bottom: 1rem;
 }
+a 
+{
+    font-family: 'Roboto', sans-serif;
+    font-weight:300;
+    color: var(--purple)!important;
+}
+.login-btn
+{
+    font-family: 'Roboto', sans-serif;
+    font-weight:300;
+    background-color: var(--purple)!important;
+    color: white;
+}
