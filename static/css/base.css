@@ -117,3 +117,8 @@ a
     background-color: var(--purple)!important;
     color: white;
 }
+.product-name
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px!important;
+}
