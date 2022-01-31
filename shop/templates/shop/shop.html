@@ -21,7 +21,7 @@
                         {% endif %}
                         <div class="card-body">
                             <h5 class="card-title">
-                                <a href="#">{{ product.name }}</a>
+                                <a  href="{% url 'product_detail' product.id %}">{{ product.name }}</a>
                             </h5>
                         </div>
                         <div class="card-footer">

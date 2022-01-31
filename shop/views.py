@@ -19,7 +19,7 @@ def product_detail(request, product_id):
     """show single product """
     product = get_object_or_404(Product, pk=product_id)
     context = {
-        'products':product,
+        'product':product,
 
     }
     return render(request,'shop/shop_detail.html', context)
