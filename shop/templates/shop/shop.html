@@ -2,6 +2,15 @@
 {% load static %}
 
 {% block content %}
+<div class="row">
+    <div class="col-lg-3">
+        <form method="GET" class="form-inline" action="{% url 'shop' %}">
+    
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-sm btn-outline-secondary my-3 px-3 py-2" type="submit">Search</button>
+        </form>
+    </div>
+</div>
 
 <section class="sections random-product">
     <div class="container-fluid">
