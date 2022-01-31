@@ -6,7 +6,7 @@
     --green:#7DE2D1;
     --lightgreen: #023618;
   }
-
+ 
 .landingsection
 {
     padding-top: 2rem;
@@ -133,7 +133,7 @@ a
 {
     font-family: 'Roboto', sans-serif;
     font-weight:300;
-    font-size:20px
+    font-size:20px;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -148,3 +148,4 @@ a
 {
     height:300px!important
 }
+

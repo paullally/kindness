@@ -3,18 +3,14 @@
 
 {% block content %}
 <div class="row">
-    <div class="col-lg-3">
+    <div class="col-lg-12">
         <form method="GET" class="form-inline" action="{% url 'shop' %}">
     
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <input class="form-control mr-sm-2" type="search"  name="q" placeholder="Search" aria-label="Search">
                 <button class="btn btn-sm btn-outline-secondary my-3 px-3 py-2" type="submit">Search</button>
         </form>
     </div>
 </div>
-
-<section class="sections random-product">
-    <div class="container-fluid">
-        <div class="container">
             <div class="row">
                 {% for product in products %}
                 <div class="col-md-4 my-5">
@@ -46,8 +42,6 @@
                 </div><!--.col-->
                 {% endfor %}
             </div><!--.row-->
-        </div><!--.container-->
-    </div><!--.container-fluid-->
-</section>>
+
 {% endblock %}
 

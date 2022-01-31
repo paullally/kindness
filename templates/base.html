@@ -53,27 +53,18 @@
   </head>
 
   <body>
-    <header class="container-fluid"></header>
-
+   
+    <header >
+      {% include "components/navbar.html"%}
+    </header>
+    
     {% block page_header %}
     {% endblock %}
-    <nav class="navbar navbar-expand-lg shadow py-4">
-      <a class="navbar-brand" href="#">Kindness</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="{% url 'account_login' %}">Login <span class="sr-only"></span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'shop' %}" >Shop</a>
-          </li>
-      </div>
-    </nav>
-    <main class="main-container">
+ 
+    <main>
+      <div class="container">
+
+      
       {% if messages %}
       {% for message in messages %}
       <h3 class="is-hidden"> {{ message }}</h3>
@@ -82,80 +73,17 @@
 
       {% block content %}
       {% endblock %}
-
+    </div>
     </main>
-    <footer class="text-center text-white shadow">
-      <!-- Grid container -->
-      <div class="container pt-4">
-        <!-- Section: Social media -->
-        <section class="mb-4">
-          <!-- Facebook -->
-          <a
-            class="btn btn-link btn-floating btn-lg text-dark m-1"
-            href="#!"
-            role="button"
-            data-mdb-ripple-color="dark"
-            ><i class="fab fa-facebook-f"></i
-          ></a>
-    
-          <!-- Twitter -->
-          <a
-            class="btn btn-link btn-floating btn-lg text-dark m-1"
-            href="#!"
-            role="button"
-            data-mdb-ripple-color="dark"
-            ><i class="fab fa-twitter"></i
-          ></a>
-    
-          <!-- Google -->
-          <a
-            class="btn btn-link btn-floating btn-lg text-dark m-1"
-            href="#!"
-            role="button"
-            data-mdb-ripple-color="dark"
-            ><i class="fab fa-google"></i
-          ></a>
-    
-          <!-- Instagram -->
-          <a
-            class="btn btn-link btn-floating btn-lg text-dark m-1"
-            href="#!"
-            role="button"
-            data-mdb-ripple-color="dark"
-            ><i class="fab fa-instagram"></i
-          ></a>
-    
-          <!-- Linkedin -->
-          <a
-            class="btn btn-link btn-floating btn-lg text-dark m-1"
-            href="#!"
-            role="button"
-            data-mdb-ripple-color="dark"
-            ><i class="fab fa-linkedin"></i
-          ></a>
-          <!-- Github -->
-          <a
-            class="btn btn-link btn-floating btn-lg text-dark m-1"
-            href="#!"
-            role="button"
-            data-mdb-ripple-color="dark"
-            ><i class="fab fa-github"></i
-          ></a>
-        </section>
-        <!-- Section: Social media -->
-      </div>
-      <!-- Grid container -->
-    
-      <!-- Copyright -->
-      <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        © 2020 Copyright:
-        <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-      </div>
-      <!-- Copyright -->
-    </footer>
+ 
+    {% if request.user.is_authenticated %}
+    {% include "components/footer_auth.html"%}
+     {%else%}
+   {% include "components/footer_noauth.html"%}
+   {% endif%}
     {% block postloadjs %}
     {% endblock %}
-    
+
   </body>
 
 </html>
