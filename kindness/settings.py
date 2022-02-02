@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'home',
     'shop',
     'bag',
-    'montly_donations'
+    'monthly_donation'
 
 ]
 
