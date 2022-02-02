@@ -1,4 +1,10 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
+
+
+
+
 def view_bag(request):
     """ renders bag """
     return render(request, 'bag/bag.html')
@@ -31,3 +37,18 @@ def adjust_bag(request, item_id):
     request.session['bag'] = bag
 
     return redirect(reverse('view_bag'))
+
+    
+def remove_from_bag(request, item_id):
+    """Remove the item from the shopping bag"""
+
+    bag = request.session.get('bag', {})
+    try:
+        bag.pop(item_id)
+
+        request.session['bag'] = bag
+
+        return HttpResponse(status=200)
+    except Exception as e:
+        messages.add_message(request, messages.SUCCESS, 'error! Try again!')
+        return HttpResponse(status=500)

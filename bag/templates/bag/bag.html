@@ -1,3 +1,4 @@
+
 {% extends "base.html" %}
 {% load static %}
 
@@ -58,7 +59,6 @@
           <a href="{% url 'shop' %}" class="mr-5 btn button-second my-2 rounded-0">
             <span class="text-uppercase">Keep Shopping</span>
           </a>
-          <a href="#" class="btn button-main my-2 rounded-0">
             <span class="text-uppercase">Proceed to Payment</span>
           </a>
         </td>
@@ -73,4 +73,34 @@
   <p class="text-center section-text ">Uh oh...it looks like your bag is empty! </p>
 </div>
 {% endif %}
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+
+<script>
+  // Update quantity on click
+  $('.update-link').click(function(e) {
+    var form = $(this).prev('.update-form');
+    form.submit();
+  })
+
+  // Remove item and reload on click
+  $('.remove-item').click(function(e) {
+    var csrfToken = "{{ csrf_token }}";
+    var itemId = $(this).attr('id').split('remove_')[1];
+    var size = $(this).data('product_size');
+    var url = `/bag/remove/${itemId}/`;
+    var data = {
+      'csrfmiddlewaretoken': csrfToken,
+      'product_size': size
+    };
+
+    $.post(url, data)
+      .done(function() {
+        location.reload();
+      });
+  })
+
+</script>
 {% endblock %}
