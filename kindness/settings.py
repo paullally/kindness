@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['localhost']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-lime-urial-m55eohks.ws-eu29.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-lime-urial-m55eohks.ws-eu30.gitpod.io']
 
 
 # Application definition
