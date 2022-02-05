@@ -8,9 +8,7 @@
     <!-- Checkout page where users can enter their details to pay for their products -->
   </div>
   <a href="{% url 'view_bag' %}" class="page-nav"><i class="fas fa-shopping-cart ml-2"></i>Return to Cart</a>
-  <p class="section-text  blue-text pt-5">Please fill out the form below to complete your order</p>
   <form action="{% url 'checkout' %}" method="POST" id="payment-form">
-    {% csrf_token %}
     <div class="row">
       <div class="col-sm-12 col-md-6 col-lg-6">
         <h6 class="pink-text mt-5">Your Details</h6>
@@ -43,13 +41,13 @@
           <span class="icon">
             <i class="fas fa-exclamation-circle"></i>
           </span>
-          <span>Your card will be charged <strong>€{{ grand_total|floatformat:2 }}</strong></span>
+          <span>Total <strong>€{{ grand_total|floatformat:2 }}</strong></span>
         </p>
       </div>
     </div>
   </form>
   <div class="row">
-    <div class="col-12 col-lg-6 col-md-6 mx-5">
+    <div class="col-12 col-lg-12 col-md-12">
       <p class="section-text blue-text">Order Summary ({{ product_count }})</p>
       <div class="row">
         <div class="col-7 offset-2">
@@ -59,7 +57,7 @@
       {% for item in bag_items %}
       <div class="row">
         <div class="col-2 mb-1">
-          <a href=#>
+          <a href="{% url 'product_detail' item.product.id %}">
             <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.name }}">
           </a>
         </div>
@@ -82,4 +80,3 @@
   </div>
 </div>
 {% endblock %}
-
