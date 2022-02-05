@@ -1,1 +1,85 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container">
+  <div class="heading">
+    <h1 class="section-head py-5 text-center">Checkout</h1>
+    <!-- Checkout page where users can enter their details to pay for their products -->
+  </div>
+  <a href="{% url 'view_bag' %}" class="page-nav"><i class="fas fa-shopping-cart ml-2"></i>Return to Cart</a>
+  <p class="section-text  blue-text pt-5">Please fill out the form below to complete your order</p>
+  <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+    {% csrf_token %}
+    <div class="row">
+      <div class="col-sm-12 col-md-6 col-lg-6">
+        <h6 class="pink-text mt-5">Your Details</h6>
+        {{ order_form.full_name | as_crispy_field }}
+        {{ order_form.email | as_crispy_field }}
+        {{ order_form.phone_number | as_crispy_field }}
+        <h6 class="pink-text mt-5">Card Details</h6>
+        <div id="card-element">
+          <!-- Elements will create input elements here -->
+        </div>
+
+        <!-- Error message for the card payment will go in here -->
+        <div class="mb-3 text-danger" id="card-errors" role="alert">
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-6">
+        <h6 class="pink-text mt-5">Delivery Details</h6>
+        {{ order_form.street_address1 | as_crispy_field }}
+        {{ order_form.street_address2 | as_crispy_field }}
+        {{ order_form.town_or_city | as_crispy_field }}
+        {{ order_form.postcode | as_crispy_field }}
+        {{ order_form.county | as_crispy_field }}
+      </div>
+    </div>
+    <div class="container d-flex justify-content-end">
+      <div class="submit-button text-right mt-5 mb-2">
+        <button id="submit-button" class="btn button-main">Complete Order
+        </button>
+        <p class="small pink-text my-0">
+          <span class="icon">
+            <i class="fas fa-exclamation-circle"></i>
+          </span>
+          <span>Your card will be charged <strong>€{{ grand_total|floatformat:2 }}</strong></span>
+        </p>
+      </div>
+    </div>
+  </form>
+  <div class="row">
+    <div class="col-12 col-lg-6 col-md-6 mx-5">
+      <p class="section-text blue-text">Order Summary ({{ product_count }})</p>
+      <div class="row">
+        <div class="col-7 offset-2">
+          <p class="mb-2 mt-3 small pink-text">Item</p>
+        </div>
+      </div>
+      {% for item in bag_items %}
+      <div class="row">
+        <div class="col-2 mb-1">
+          <a href=#>
+            <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.name }}">
+          </a>
+        </div>
+        <div class="col-7">
+          <p class="mb-3">{{ item.product.name }}</p>
+          <p class="my-0 small pink-text">Qty: {{ item.quantity }}</p>
+        </div>
+      </div>
+      {% endfor %}
+      <hr class="my-3">
+      <div class="row blue-text section-text text-right">
+        <div class="col-7 offset-2">
+          <p class="my-0 blue-text">Total:</p>
+        </div>
+        <div class="col-3">
+          <p class="mx-5 blue-text"><strong>€{{ grand_total | floatformat:2 }}</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
 

@@ -50,6 +50,10 @@ INSTALLED_APPS = [
     'monthly_donation',
     'checkout',
 
+
+
+    'crispy_forms',
+
 ]
 
 MIDDLEWARE = [
