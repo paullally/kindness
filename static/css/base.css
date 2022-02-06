@@ -6,6 +6,7 @@
     --green:#7DE2D1;
     --lightgreen: #023618;
   }
+
  
 .landingsection
 {
@@ -149,12 +150,14 @@ a
     height:300px!important
 }
 
-.temp 
-{
-    background-color: grey;
-    
-}
 .ks
 {
     color: white!important;
+}
+.page-nav
+{
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: var(--green)!important;
 }
