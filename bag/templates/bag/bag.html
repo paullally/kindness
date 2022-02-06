@@ -1,7 +1,6 @@
 
 {% extends "base.html" %}
 {% load static %}
-
 {% block content %}
 <div class="section">
   <div class=" container d-flex justify-content-start mt-5">
@@ -58,7 +57,7 @@
           <a href="{% url 'shop' %}" class="btn rounded-0 login-btn mt-5">
             <span class="text-uppercase ks">Keep Shopping</span>
           </a>
-          <a href="{% url 'shop' %}" class="btn rounded-0 addtocart mt-5">
+          <a href="{% url 'checkout'%}" class="btn rounded-0 addtocart mt-5">
             <span class="text-uppercase ks">Proceed to Payment</span>
           </a>
         </td>
