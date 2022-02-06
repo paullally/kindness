@@ -8,7 +8,7 @@ import stripe
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
 DONATION_AMOUNTS = (
-    ('0', 'reg'),
+    ('0', '0'),
     ('5', '5'),
     ('10', '10'),
     ('20', '20'),
