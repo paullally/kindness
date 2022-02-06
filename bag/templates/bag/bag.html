@@ -8,7 +8,7 @@
     <a href="{% url 'shop' %}" class="page-nav"><i class="fas fa-chevron-left"></i>Back to Shop</a>
   </div>
 </div>
-<h2 class="section-head text-center cart my-5">Your Cart</h2>
+<h2 class="section-head text-center pb-5">Your Cart</h2>
 {% if bag_items %}
 <div class="container">
   <div class="table-responsive rounded">
@@ -43,8 +43,8 @@
               </div>
             </div>
           </form>
-          <a class="pink-color update-link text-center my-2">Update</a>
-          <a class="blue-color float-right remove-item text-center my-2" id="remove_{{ item.item_id }}">Remove</a>
+          <a class="update-link text-center my-2 float-left">Update</a>
+          <a class=" float-right remove-item text-center my-2" id="remove_{{ item.item_id }}">Remove</a>
         </td>
       </tr>
       {% endfor %}
@@ -70,7 +70,7 @@
 <!-- This is displayed if the page has no items within it -->
 {% else %}
 <div class="bag-image">
-  <p class="text-center section-text ">Uh oh...it looks like your bag is empty! </p>
+  <p class="text-center section-text ">looks like your bag is empty! </p>
 </div>
 {% endif %}
 {% endblock %}
