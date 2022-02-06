@@ -9,6 +9,7 @@
   </div>
   <a href="{% url 'view_bag' %}" class="page-nav"><i class="fas fa-shopping-cart ml-2"></i>Return to Cart</a>
   <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+    {% csrf_token %}
     <div class="row">
       <div class="col-sm-12 col-md-6 col-lg-6">
         <h6 class="pink-text mt-5">Your Details</h6>
@@ -79,4 +80,10 @@
     </div>
   </div>
 </div>
+{% endblock %}
+{% block postloadjs %}
+{{ block.super }}
+{{ stripe_public_key|json_script:"id_stripe_public_key" }}
+{{ client_secret|json_script:"id_client_secret" }}
+<script src="{% static 'js/stripe_elements.js' %}"></script>
 {% endblock %}
