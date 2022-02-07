@@ -21,7 +21,7 @@ def get_membership(request):
 @login_required()
 def get_subscription(request):
     subscription = Subscription.objects.filter(
-        membership=get_membership(request))
+        user_membership=get_membership(request))
     if subscription.exists():
         user_subscription = subscription.first()
         return user_subscription
@@ -41,9 +41,23 @@ def selected_membership(request):
 
 @login_required()
 def donations(request):
-    """ This displays the membership list page. 
-    Also deals with a post request, which will take in the selected membership, store in a session and render the payment page.
-    If a GET request, it will then render the membership list page instead. """
+
+    if request.method == "POST":
+        selected_membership_type = request.POST.get('membership_type')
+        selected_membership = Membership.objects.get(
+            membership_type=selected_membership_type)
+        request.session['selected_membership_type'] = selected_membership.membership_type
+        form = SubscriptionForm()
+
+        context = {
+
+            'selected_membership': selected_membership,
+            'stripe_public_key': stripe_public_key,
+            'form': form
+        }
+        return render(request, 'donations/checkout.html', context)
+
+
     memberships = Membership.objects.all()
     current_membership = get_membership(request)
     users_membership = str(current_membership.membership)
@@ -55,3 +69,8 @@ def donations(request):
     }
 
     return render(request, 'donations/donations.html', context)
+
+
+@login_required()
+def checkout(request):
+    return render(request, 'donations/checkout.html', context)
