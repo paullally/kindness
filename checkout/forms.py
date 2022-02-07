@@ -1,7 +1,10 @@
 from django import forms
 from .models import Order
 
-# The form users in the checkout page where users enter their delivrey information 
+# The form users in the checkout page where users enter their delivrey
+# information
+
+
 class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
