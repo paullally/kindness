@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['localhost']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-paullally-kindness-pp2jhtebe46.ws-eu30.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-paullally-kindness-o4a842ysx5f.ws-eu30.gitpod.io']
 
 
 # Application definition
@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'shop',
     'bag',
     'checkout',
+    'donations',
 
 
 
