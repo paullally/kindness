@@ -1,25 +1,33 @@
 <nav class="navbar navbar-expand-lg shadow py-4">
-    <a class="navbar-brand" href="#">Kindness</a>
+    <a class="navbar-brand" href="/">Kindness</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="{% url 'account_login' %}">Login <span class="sr-only"></span></a>
+     
+        {% if request.user.is_authenticated %}
+        <ul class="navbar-nav mr-auto">
+        <li>
+          <a class="nav-link" href="#">Donate</a>
         </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="{% url 'account_signup' %}">Sign In <span class="sr-only"></span></a>
+        <li>
+          <a class="nav-link" href="{% url 'shop' %}">Shop</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'shop' %}" >Shop</a>
+        <li>
+          <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
         </li>
+      </ul>
+        {% else %}
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'account_login' %}">Login <span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'account_signup' %}">Sign Up <span class="sr-only"></span></a>
+          </li>
+          </ul>
+        {% endif %}
     </div>
-    <div class="d-flex align-items-center">
-        <!-- Icon -->
-        <a class="text-reset me-3" href="{% url 'view_bag' %}">
-          <i class="fas fa-shopping-cart"></i>
-        </a>
-        </div>
+   
   </nav>
