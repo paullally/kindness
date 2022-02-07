@@ -43,6 +43,7 @@ class UserMembership(models.Model):
     street_address1 = models.CharField(max_length=80, null=False)
     street_address2 = models.CharField(max_length=80, null=True, blank=True)
     county = models.CharField(max_length=80, null=True)
+    country = models.CharField(max_length=80, null=True)
 
     def __str__(self):
         return self.user.username
