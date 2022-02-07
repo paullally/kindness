@@ -10,5 +10,4 @@ urlpatterns = [
     path('shop/', include('shop.urls')),
     path('bag/', include('bag.urls')),
     path('checkout/', include('checkout.urls')),
-    path('donate/', include('monthly_donation.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
