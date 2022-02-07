@@ -21,7 +21,7 @@ def get_membership(request):
 @login_required()
 def get_subscription(request):
     subscription = Subscription.objects.filter(
-        membership=getmembership(request))
+        membership=get_membership(request))
     if subscription.exists():
         user_subscription = subscription.first()
         return user_subscription
@@ -36,3 +36,22 @@ def selected_membership(request):
     if membership.exists():
         return membership.first()
     return None
+
+
+
+@login_required()
+def donations(request):
+    """ This displays the membership list page. 
+    Also deals with a post request, which will take in the selected membership, store in a session and render the payment page.
+    If a GET request, it will then render the membership list page instead. """
+    memberships = Membership.objects.all()
+    current_membership = get_membership(request)
+    users_membership = str(current_membership.membership)
+    subscription = get_subscription(request)
+    context = {
+        'memberships': memberships,
+        'users_membership': users_membership,
+        'subscription': subscription,
+    }
+
+    return render(request, 'donations/donations.html', context)
