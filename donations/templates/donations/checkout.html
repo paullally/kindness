@@ -19,8 +19,8 @@
           {{ form.full_name | as_crispy_field }}
           {{ form.email | as_crispy_field }}
           {{ form.phone_number | as_crispy_field }}
-          <div class="mt-5">
-            <h6 class="">Card Details</h6>
+          <div>
+            <h6>Card Details</h6>
             <div id="card-element">
               <!-- Elements will create input elements here -->
             </div>
@@ -31,7 +31,7 @@
           <div id="stripe-token-handler" class="is-hidden"><span class="token"></span></div>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-6">
-          <h6 class="">Delivery Details</h6>
+          <h6 class="">Billing Details</h6>
           {{ form.street_address1 | as_crispy_field }}
           {{ form.street_address2 | as_crispy_field }}
           {{ form.town_or_city | as_crispy_field }}

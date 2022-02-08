@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+{% if subscription.active %}
+<h2 class="page-head text-center pt-5">Your Dontaion Details</h2>
+{% else %}
+<h5 class="text-center page-sub blue-text pb-5 capitalize">You Dont have an acitve Donation</h5>
+{% endif %}
+
+{% if messages %}
+{% for message in messages %}
+<h3 class="text-center message"> {{ message }}</h3>
+{% endfor %}
+{% endif %}
+
+{% if subscription.active %}
+<div class="row">
+  <div class="col-lg-4 col-md-4 col-sm-12">
+    <div class="card my-5 detailscard">
+      <div class="card-body">
+        <h5 class="card-title text-center mb-5">Your Details</h5>
+        <p class="text-center">Full Name: {{ current_membership.full_name }}</p>
+        <p class="text-center"> Email: {{ current_membership.email }}</p>
+       <p class="text-center">Phone Number: {{ current_membership.phone_number }}</p>
+       
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-4 col-sm-12">
+<div class="card my-5 detailscard">
+  <div class="card-body">
+    <h5 class="card-title text-center mb-5">Your Billing Details</h5>
+    <p class="text-center">Street Address 1: {{ current_membership.street_address1 }}</p>
+     <p class="text-center"> {% if current_membership.street_address2 %}Street Address 2: {{ current_membership.street_address2 }}{% endif %}</p>
+     <p class="text-center">Town/City: {{ current_membership.town_or_city }}</p>
+    <p class="text-center">{% if current_membership.county%}County:{{ current_membership.county }}{% endif %}</p>
+    <p class="text-center">{% if current_membership.postcode %}Postcode:{{ current_membership.postcode }}{% endif %}</p>
+  </div>
+</div>
+  </div>
+  <div class="col-lg-4 col-md-4 col-sm-12">
+    <div class="card my-5 detailscard">
+      <div class="card-body">
+        <h5 class="card-title text-center mb-5">Your Donation Plan</h5>
+        {% for member in memberships %}
+        {% if member == current_membership.membership %}
+        {% if member.membership_type %}
+       <h3 class="text-center"> €{{ member.price }}/month</h3>
+     
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+        <div class=" text-center for mb-3">
+          <a class="btn addtocart" href="{% url 'donations' %}">Update Subscription</a>
+          <a  class=" btn login-btn" data-toggle="modal" data-target="#exampleModalLong">Cancel Subscription</a>
+        </div>
+      </div>
+    </div>
+      </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Cancel Subscription</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to cancel your subscription?<br>
+        We would hate to see you go.
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn ">Cancel Subscription</a>
+      </div>
+    </div>
+  </div>
+{% else %}
+<div class="section">
+<div class="text-center">
+<div class="row">
+      <div class="col-12 d-flex justify-content-center">
+      <a href="{% url 'donations' %}" class="heartbeat">
+      <h4 class="pink-color">Activate subscription now!</h4>
+        </a>
+      </div>
+</div>
+</div>
+</div>
+{% endif %}
+{% endblock %}

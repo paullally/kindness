@@ -116,7 +116,7 @@ a
     font-family: 'Roboto', sans-serif;
     font-weight:300;
     background-color: var(--purple)!important;
-    color: white;
+    color: white!important;
 }
 .product-name
 {
@@ -128,7 +128,7 @@ a
     font-family: 'Roboto', sans-serif;
     font-weight:300;
     background-color: var(--darkgreen)!important;
-    color: white;
+    color: white!important;
 }
 .price
 {
@@ -240,4 +240,21 @@ a
 {
     font-family: 'Dancing Script', cursive;
     font-weight: 100;
+}
+.detailscard
+{
+    min-height: 400px;
+}
+.for
+{
+  font-size: 14px;
+  color: #5cc9ca;
+  position: absolute;
+  bottom:0;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
