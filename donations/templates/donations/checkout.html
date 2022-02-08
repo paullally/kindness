@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<section class="section">
+  <div class="container">
+    <h1 class="section-head text-center my-5">Subscription Checkout</h1>
+    <div class="order-summary">
+      <h6 class="pink-text text-right mt-5">Subscription Details</h6>
+      <p class="section-text text-right">{{ selected_membership}}</p>
+      <p class="section-text text-right">€{{ selected_membership.price}}<small> per month</small></p>
+    </div>
+  </div>
+  <div class="container">
+    <form id="payment-form" method="POST" action="{% url 'subscribe'%}" class="mt-5">
+      {% csrf_token %}
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+          <h6 class="">Your Details</h6>
+          {{ form.full_name | as_crispy_field }}
+          {{ form.email | as_crispy_field }}
+          {{ form.phone_number | as_crispy_field }}
+          <div class="mt-5">
+            <h6 class="">Card Details</h6>
+            <div id="card-element">
+              <!-- Elements will create input elements here -->
+            </div>
+            <!-- We'll put the error messages in this element -->
+            <div class="mb-3 text-danger" id="card-errors" role="alert">
+            </div>
+          </div>
+          <div id="stripe-token-handler" class="is-hidden"><span class="token"></span></div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+          <h6 class="">Delivery Details</h6>
+          {{ form.street_address1 | as_crispy_field }}
+          {{ form.street_address2 | as_crispy_field }}
+          {{ form.town_or_city | as_crispy_field }}
+          {{ form.postcode | as_crispy_field }}
+          {{ form.county | as_crispy_field }}
+          {{ form.country | as_crispy_field }}
+        </div>
+      </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-sm-6 col-md-6 col-lg-3">
+          <button id="buttonsubmit" class="btn button-main mt-5 mb-2">Change Subscription</button>
+          <span class="icon">
+            <i class="fas fa-exclamation-circle pink-text"></i>
+          </span>
+          <span class="pink-text"><small>By confirming this payment you are agreeing to pay €{{selected_membership.price}}<sub>/month</sub> & your details will be stored in our database</small></span>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{{ stripe_public_key|json_script:"id_stripe_public_key" }}
+{{ client_secret|json_script:"id_client_secret" }}
+<script src="{% static 'js/subscription.js' %}"></script>
+{% endblock %}

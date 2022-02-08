@@ -71,29 +71,29 @@ def donations(request):
 
 
 @login_required()
-def checkout(request):
+def subscribe(request):
     user_membership = get_membership(request)
-    form = Donationform()
+    form = DonationForm()
 
     if request.method == "POST":
         form_data = request.POST
         token = request.POST['stripeToken']
-        form = Donationform(form_data, instance=user_membership)
+        form = DonationForm(form_data, instance=user_membership)
 
         if form.is_valid():
             customer = stripe.Customer.retrieve(user_membership.stripe_customer_id)
             customer.source = token
             customer.save()
             form.save()
-            selected_membership = selected_membership(request)
+            select_membership = selected_membership(request)
             subscription = stripe.Subscription.create(
                 customer=user_membership.stripe_customer_id,
                 items=[
-                    {"plan": selected_membership.stripe_plan_id},
+                    {"plan": select_membership.stripe_plan_id},
                 ]
             )
             user_membership = get_membership(request)
-            user_membership.membership = selected_membership
+            user_membership.membership = select_membership
             user_membership.save()
 
             subscription_id = subscription.id
