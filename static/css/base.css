@@ -258,3 +258,14 @@ a
   margin-top: 5px;
   margin-bottom: 5px;
 }
+.details
+{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+.overviewtitle
+{
+    font-size: 30px;
+    font-family: 'Dancing Script', cursive;
+
+}

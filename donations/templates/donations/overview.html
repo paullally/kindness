@@ -19,10 +19,10 @@
   <div class="col-lg-4 col-md-4 col-sm-12">
     <div class="card my-5 detailscard">
       <div class="card-body">
-        <h5 class="card-title text-center mb-5">Your Details</h5>
-        <p class="text-center">Full Name: {{ current_membership.full_name }}</p>
-        <p class="text-center"> Email: {{ current_membership.email }}</p>
-       <p class="text-center">Phone Number: {{ current_membership.phone_number }}</p>
+        <h5 class="card-title text-center mb-5 overviewtitle">Your Details</h5>
+        <p class="text-center details">Full Name: {{ current_membership.full_name }}</p>
+        <p class="text-center details"> Email: {{ current_membership.email }}</p>
+       <p class="text-center details">Phone Number: {{ current_membership.phone_number }}</p>
        
       </div>
     </div>
@@ -30,23 +30,23 @@
   <div class="col-lg-4 col-md-4 col-sm-12">
 <div class="card my-5 detailscard">
   <div class="card-body">
-    <h5 class="card-title text-center mb-5">Your Billing Details</h5>
-    <p class="text-center">Street Address 1: {{ current_membership.street_address1 }}</p>
-     <p class="text-center"> {% if current_membership.street_address2 %}Street Address 2: {{ current_membership.street_address2 }}{% endif %}</p>
-     <p class="text-center">Town/City: {{ current_membership.town_or_city }}</p>
-    <p class="text-center">{% if current_membership.county%}County:{{ current_membership.county }}{% endif %}</p>
-    <p class="text-center">{% if current_membership.postcode %}Postcode:{{ current_membership.postcode }}{% endif %}</p>
+    <h5 class="card-title text-center mb-5 overviewtitle">Your Billing Details</h5>
+    <p class="text-center details">Street Address 1: {{ current_membership.street_address1 }}</p>
+     <p class="text-center details"> {% if current_membership.street_address2 %}Street Address 2: {{ current_membership.street_address2 }}{% endif %}</p>
+     <p class="text-center details">Town/City: {{ current_membership.town_or_city }}</p>
+    <p class="text-center details">{% if current_membership.county%}County:{{ current_membership.county }}{% endif %}</p>
+    <p class="text-center details">{% if current_membership.postcode %}Postcode:{{ current_membership.postcode }}{% endif %}</p>
   </div>
 </div>
   </div>
   <div class="col-lg-4 col-md-4 col-sm-12">
     <div class="card my-5 detailscard">
       <div class="card-body">
-        <h5 class="card-title text-center mb-5">Your Donation Plan</h5>
+        <h5 class="card-title text-center mb-5 overviewtitle">Your Donation Plan</h5>
         {% for member in memberships %}
         {% if member == current_membership.membership %}
         {% if member.membership_type %}
-       <h3 class="text-center"> €{{ member.price }}/month</h3>
+       <h2 class="text-center "> €{{ member.price }}/month</h2>
      
         {% endif %}
         {% endif %}
