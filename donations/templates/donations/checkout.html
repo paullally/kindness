@@ -4,10 +4,9 @@
 {% block content %}
 <section class="section">
   <div class="container">
-    <h1 class="section-head text-center my-5">Subscription Checkout</h1>
+    <h1 class="text-center my-5  login-head">Checkout</h1>
     <div class="order-summary">
-      <h6 class="pink-text text-right mt-5">Subscription Details</h6>
-      <p class="section-text text-right">{{ selected_membership}}</p>
+      <h6 class=" text-right mt-5">You Plan to donate:</h6>
       <p class="section-text text-right">€{{ selected_membership.price}}<small> per month</small></p>
     </div>
   </div>
@@ -43,11 +42,7 @@
       </div>
     <div class="row d-flex justify-content-center">
         <div class="col-sm-6 col-md-6 col-lg-3">
-          <button id="buttonsubmit" class="btn button-main mt-5 mb-2">Change Subscription</button>
-          <span class="icon">
-            <i class="fas fa-exclamation-circle pink-text"></i>
-          </span>
-          <span class="pink-text"><small>By confirming this payment you are agreeing to pay €{{selected_membership.price}}<sub>/month</sub> & your details will be stored in our database</small></span>
+          <button id="buttonsubmit" class="btn login-btn mt-5 mb-5">Confirm Payment</button>
         </div>
       </div>
     </form>
