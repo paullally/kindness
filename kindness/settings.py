@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['localhost']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-paullally-kindness-w731svyqy3g.ws-eu30.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-paullally-kindness-8yl3079rzfv.ws-eu30.gitpod.io']
 
 
 # Application definition

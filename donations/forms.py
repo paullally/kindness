@@ -2,18 +2,14 @@ from django import forms
 from .models import UserMembership
 
 
-class SubscriptionForm(forms.ModelForm):
+class DonationForm(forms.ModelForm):
     class Meta:
         model = UserMembership
         fields = ('full_name', 'email', 'phone_number',
                   'street_address1', 'street_address2',
-                  'town_or_city', 'postcode', 'county',)
+                  'town_or_city', 'postcode', 'county', 'country')
 
     def __init__(self, *args, **kwargs):
-        """
-        Add placeholders and classes, remove auto-generated
-        labels and set autofocus on first field
-        """
         super().__init__(*args, **kwargs)
         placeholders = {
             'full_name': 'Full Name',
