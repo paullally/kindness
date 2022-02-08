@@ -5,7 +5,7 @@
 {% if subscription.active %}
 <h2 class="page-head text-center pt-5">Your Dontaion Details</h2>
 {% else %}
-<h5 class="text-center page-sub blue-text pb-5 capitalize">You Dont have an acitve Donation</h5>
+<h5 class="text-center my-5 login-head">You Dont have an acitve Donation</h5>
 {% endif %}
 
 {% if messages %}
@@ -75,7 +75,7 @@
         We would hate to see you go.
       </div>
       <div class="modal-footer">
-        <a href="#" class="btn ">Cancel Subscription</a>
+        <a href="{% url 'cancelSubscription' %}" class="btn login-btn ">Cancel Subscription</a>
       </div>
     </div>
   </div>
@@ -84,8 +84,8 @@
 <div class="text-center">
 <div class="row">
       <div class="col-12 d-flex justify-content-center">
-      <a href="{% url 'donations' %}" class="heartbeat">
-      <h4 class="pink-color">Activate subscription now!</h4>
+      <a href="{% url 'donations' %}">
+      <h4 >Activate subscription now!</h4>
         </a>
       </div>
 </div>

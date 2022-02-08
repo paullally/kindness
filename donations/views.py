@@ -124,7 +124,6 @@ def subscribe(request):
 
 
 def overview(request):
-    """ This page renders the subscription overview. Renders the information for the user """
     current_membership = get_membership(request)
     subscription = get_subscription(request)
     memberships = Membership.objects.all()
@@ -135,3 +134,31 @@ def overview(request):
         'memberships': memberships,
     }
     return render(request, 'donations/overview.html', context)
+
+
+
+@login_required
+def cancelSubscription(request):
+    user_membership = get_membership(request)
+
+    if user_membership.membership != '0' or user_membership.membership is not None:
+        user_sub = get_subscription(request)
+        sub = stripe.Subscription.retrieve(user_sub.stripe_subscription_id)
+        sub.delete()
+        user_sub.active = False
+        user_sub.save()
+        free_membership = Membership.objects.get(membership_type='0')
+        user_membership = get_membership(request)
+        user_membership.membership = free_membership
+        user_membership.save()
+
+        messages.add_message(
+            request,
+            messages.SUCCESS,
+            'successfully Updated')
+        return redirect(reverse('overview'))
+    messages.add_message(
+        request,
+        messages.SUCCESS,
+        'Error')
+    return redirect(reverse('overview'))

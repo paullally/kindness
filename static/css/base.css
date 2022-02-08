@@ -6,7 +6,11 @@
     --green:#7DE2D1;
     --lightgreen: #023618;
   }
-
+.hidden
+{
+    display: none;
+    visibility: hidden;
+}
  
 .landingsection
 {
