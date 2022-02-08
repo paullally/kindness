@@ -11,6 +11,10 @@
     display: none;
     visibility: hidden;
 }
+.search
+{
+    width: 50%!important;
+}
  .navbar-brand
  {
     font-family: 'Dancing Script', cursive;
