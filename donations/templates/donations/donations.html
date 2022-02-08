@@ -1,5 +1,53 @@
 {% extends "base.html" %}
 {% load static %}
+
 {% block content %}
+<h2 class="section-head py-5 text-center">Please pick a Donation Plan</h2>
+<section class="section mt-5">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      {% for member in memberships %}
+      {% if member.membership_type != '0' %}
+      <div class="col-lg-4">
+        <div class="card mb-5 mb-lg-0">
+          <div class="card-body">
+            {% if member.membership_type == '30' %}
+            <div class="heaer d-flex justify-content-center my-3">
+              <h5 class="text-center d-inline"><i class="fas fa-donate"></i></h5>
+              <h5 class="text-center d-inline"><i class="fas fa-donate"></i></h5>
+              <h5 class="text-center d-inline"><i class="fas fa-donate"></i></h5>
+            </div>
+            
+            {% elif member.membership_type == '20' %}
+            <div class="heaer d-flex justify-content-center my-3">
+              <h5 class="text-center d-inline"><i class="fas fa-donate"></i></h5>
+              <h5 class="text-center d-inline"><i class="fas fa-donate"></i></h5>
+            </div>
+            {% else %}
+            <div class="heaer d-flex justify-content-center my-3">
+              <h5 class="text-center d-inline"><i class="fas fa-donate"></i></h5>
+            </div>
+            {% endif %}
+            <h6 class="section-text">€{{ member.price }}<sub>/month</sub></h6>
+            <hr>
+            <p>Gain access to our exclusive shop</p>
+            <form method="POST" action="{% url 'donations'%}">
+              {% csrf_token %}
+              {% if member.membership_type != users_membership %}
+              <button type="submit" class="btn button-main btn-block">Subscribe</button>
+              {% else %}
+              <p class="blue-text text-center pt-4">This is your current plan </p>
+              {% endif %}
+              <input type="hidden" name="membership_type" value="{{ member.membership_type }}">
+            </form>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+
+    </div>
+  </div>
+</section>
+
 {% endblock %}
-  
