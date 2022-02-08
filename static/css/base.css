@@ -232,3 +232,12 @@ a
 {
     min-height: 250px;
 }
+.fa-donate
+{
+    color: var(--purple);
+}
+.opts
+{
+    font-family: 'Dancing Script', cursive;
+    font-weight: 100;
+}
