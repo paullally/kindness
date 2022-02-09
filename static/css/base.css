@@ -296,10 +296,24 @@ a
 {
     color: var(--purple)!important;
 }
-
+.errorlist
+{
+    font-size: 15px;
+    color: red;
+}
+.messages
+{
+    color: var(--green);
+    font-size: 25px;
+    padding: 10px;
+    margin:10px
+}
 @media only screen and (min-width: 577px) {
     .search
     {
     width: 50%!important;
     }
   }
+
+
+ 

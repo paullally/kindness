@@ -15,7 +15,6 @@ MEMBERSHIP_CHOICES = (
 )
 
 
-# Membership type View for DB admin
 class Membership(models.Model):
     membership_type = models.CharField(
         choices=MEMBERSHIP_CHOICES,
