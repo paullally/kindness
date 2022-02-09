@@ -64,7 +64,11 @@
     <main>
       <div class="container">
 
-      
+        {% if messages %}
+      {% for message in messages %}
+      <h3 class="is-hidden"> {{ message }}</h3>
+      {% endfor %}
+      {% endif %}
     
 
       {% block content %}
