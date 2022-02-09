@@ -5,4 +5,3 @@ $(window).on('load', function() {
 $(".smart-form-timeline").append(p)
 $('#Modal').modal('show');
 });
-console.log("ASDASDASDAS")
