@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['localhost']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-paullally-kindness-8yl3079rzfv.ws-eu30.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-paullally-kindness-6558lydy1ip.ws-eu30.gitpod.io']
 
 
 # Application definition
@@ -166,5 +166,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 STRIPE_CURRENCY = 'eur'
-STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY')
-STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
+STRIPE_PUBLIC_KEY = 'pk_test_51KPxUOEbv8RdDomljabPVtrGdI0xr4kGgwH1YuJu6rzvYS5FCMQ3lGqnW8VFoHVk3RdDV0tWTCeUqfjLCyMTVN6G00My7sUpss'
+STRIPE_SECRET_KEY = 'sk_test_51KPxUOEbv8RdDomlnBCtngYhxPELZSvJCmFMoWCaeipVOAPdJhgSNZeGim6KJqJvYvNmibSBNhXAk55NC52EyKch00uyCTdt96'
