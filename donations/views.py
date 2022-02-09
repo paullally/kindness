@@ -11,12 +11,14 @@ import stripe
 stripe_public_key = settings.STRIPE_PUBLIC_KEY
 stripe_secret_key = settings.STRIPE_SECRET_KEY
 
+
 @login_required()
 def get_membership(request):
     membership = UserMembership.objects.filter(user=request.user)
     if membership.exists():
         return membership.first()
     return None
+
 
 @login_required()
 def get_subscription(request):
@@ -38,7 +40,6 @@ def selected_membership(request):
     return None
 
 
-
 @login_required()
 def donations(request):
     if request.method == "POST":
@@ -55,7 +56,6 @@ def donations(request):
             'form': form
         }
         return render(request, 'donations/checkout.html', context)
-
 
     memberships = Membership.objects.all()
     current_membership = get_membership(request)
@@ -81,7 +81,8 @@ def subscribe(request):
         form = DonationForm(form_data, instance=user_membership)
 
         if form.is_valid():
-            customer = stripe.Customer.retrieve(user_membership.stripe_customer_id)
+            customer = stripe.Customer.retrieve(
+                user_membership.stripe_customer_id)
             customer.source = token
             customer.save()
             form.save()
@@ -97,7 +98,8 @@ def subscribe(request):
             user_membership.save()
 
             subscription_id = subscription.id
-            sub, created = Subscription.objects.get_or_create(user_membership=user_membership)
+            sub, created = Subscription.objects.get_or_create(
+                user_membership=user_membership)
             sub.stripe_subscription_id = subscription_id
             sub.active = True
             sub.save()
@@ -136,7 +138,6 @@ def overview(request):
     return render(request, 'donations/overview.html', context)
 
 
-
 @login_required
 def cancelSubscription(request):
     user_membership = get_membership(request)
@@ -162,7 +163,6 @@ def cancelSubscription(request):
         messages.SUCCESS,
         'Error')
     return redirect(reverse('overview'))
-
 
 
 def loggedout(request):

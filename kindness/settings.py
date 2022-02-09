@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost',"kindnesscharity.herokuapp.com"]
+ALLOWED_HOSTS = ['localhost', "kindnesscharity.herokuapp.com"]
 
 
 # Application definition
@@ -53,7 +53,7 @@ INSTALLED_APPS = [
 
     'crispy_forms',
     'storages',
-    
+
 
 ]
 
@@ -185,7 +185,6 @@ if 'USE_AWS' in os.environ:
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 
-    
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
     EMAIL_USE_TLS = True
     EMAIL_PORT = 587
@@ -197,9 +196,6 @@ if 'USE_AWS' in os.environ:
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     DEFAULT_FROM_EMAIL = 'kindness@example.com'
-
-
-
 
 
 STRIPE_CURRENCY = 'eur'

@@ -46,8 +46,14 @@
     - [**Backend Technologies**](#back-end-technologies)
     - [**Other Tools Used**](#other-tools-used)
 
-- ### [**TESTING.md**](TESTING.md)
-    - All testing can be found in this [**TESTING.md**](TESTING.md) file.
+-  <a href=#T><h3><strong>Testing</strong></h3></a>
+    - [**Code Testing**](#code-testing)
+    - [**Validator Testing**](#validator-testing)
+    - [**User Story Testing**](#User-Story-Testing)
+    - [**Manual Testing**](#manual-testing)
+    - [**Lighthouse**](#lighthouse)
+    - [**Responsive Testing**](#responsive-testing)
+    - [**Bug Report**](#bug-report)
 
 - <a href=#deployment><h3><strong>Deployment</strong></h3></a>
     - [**Local Deployment**](#local-deployment)
@@ -272,7 +278,7 @@ There are 2 core Donation pages
     Grand Total | postcode | max_digits=10,decimal_places=2,null=False,default=0 | DecimalField
 
 
-<h2 align=center><strong>Technologies Used</strong></h2>
+<h2 align=center id="TU"><strong>Technologies Used</strong></h2>
 
 - ### **Front End Technologies**
     - **HTML**
@@ -302,4 +308,127 @@ There are 2 core Donation pages
     - [**Pillow**](https://pillow.readthedocs.io/en/stable/) a python imaging library to aid in processing image files to store in the database.
     - [**Psycopg2**](https://pypi.org/project/psycopg2/) as PostgreSQL database adapter for Python.
 
+
+<h2 align=center id='T'><strong>Testing</strong></h2>
+
+### **Code Testing**
+#### **validator testing**
+[W3C Markup Validation](https://validator.w3.org/)
+
+W3C Markup Validation was used to validate both the HTMl and CSS for this application.
+- No errors were noted in the CSS 
+- No errors were noted in the HTML
+- 1 Warning was given.
+
+This warning was because of my h1 elements on the ladning page as two of the contained fontawesome icons with no text. The Warning was for having an empty h1.
+
+
+[JSHint](https://jshint.com/)
+
+ **Metrics**
+
+- When running the `stripe_elements.js` the JSHint validator these metrics were returned :
+    - There are 5 functions in this file.
+    - Function with the largest signature take 1 arguments, while the median is 1.
+    - Largest function has 10 statements in it, while the median is 5.
+
+- When running the `subscription.js` the JSHint validator these metrics were returned :
+    - There are 4 functions in this file.
+    - Function with the largest signature take 1 arguments, while the median is 1.
+    - Largest function has 8 statements in it, while the median is 4.
+    - The most complex function has a cyclomatic complexity value of 2 while the median is 1.5.
+    - Two undefined variables $ and  Stripe
+    - One unused variable  clientSecret
+
+- When running the `subscription.js` the JSHint validator these metrics were returned :
+    - There is only one function in this file.
+    - It takes no arguments.
+    - This function contains 4 statements.
+    - Cyclomatic complexity number for this function is 1.
+    - One undefined variable $ 
+
+<h2 align=center id="top"><img src="static/images/jsvalid.png" max-height=50px></h2>
+
+
+[Python PEP8](https://pypi.org/project/autopep8/)
+- The autopep8 extension was installed in the workspace. 
+    - autopep8 was used on all python3 pages
+
+
+
+### **User Story Testing**
+
+1. **As a user**, I want the website to be fully reponsive. 
+    - Each page on Kindness is fully responsive
+2. **As a user**, I want to be able to login
+    - You are able to log in to the kindness website
+3. **As a user**, I want to be able to donate to charity on a monthly basis. 
+    - The donations page allows users to donate on a monthly basis
+4. **As a user**, I want to be able to cancel my monthly donation. 
+    - The Donation page allows users to cancel there donation
+5. **As a user**, I want to be able to edit the monthly donation i have set up. 
+    -  The Donation page allows users to edit there donation
+6. **As a user**, I want all information to be displayed on the home page. 
+    - The landing pages has all you need to know about kindess 
+7. **As a user**, I want to be able to be able to view a shop. 
+    - You can access the shop once you log in.
+9. **As a user**, I  want to be able to edit and delete items in my shopping basket.
+    - You can add and remove items from your shopping basket.
+10. **As a user**, I get extra information about the product i am about to purchase.
+    - You can view more information about each product on the shop page by clicking the product name
+
+### **Manual Testing**
+
+manual testing was completed to make sure each page was fully responsive.
+
+#### **Lighthouse**
+
+A desktop Lighthouse report was completed on the kindness website
+The results were as follows:
+<h2 align=center id="top"><img src="wireframes/desktop.png" max-height=100px></h2>
+
+A mobile Lighthouse report was completed on the kindess website
+The results were as follows:
+<h2 align=center id="top"><img src="wireframes//mobile.png" max-height=100px></h2>
+
+### **Desktop Testing**
+-
+    | Page | Responsive| Notes| 
+    --- | --- | ---
+    Home | Y | Fully Responsive.
+    Myworkouts | Y | Fully Responsive.  
+    AllWorkouts | Y | Fully Responsive.
+    profile | Y | Fully Responsive.
+
+### **Tablet Testing**
+-
+   | Page | Responsive| Notes| 
+    --- | --- | ---
+    Landing | Y | Fully Responsive. No horizontal scrollbar. 
+    Donate Plans | Y | Fully Responsive.  No horizontal scrollbar. 
+    Donate Overview | Y | Fully Responsive.
+    Login | Y | Fully Responsive.  No horizontal scrollbar. 
+    Sign-Up | Y | Fully Responsive.  No horizontal scrollbar. 
+    Shop | Y | Three items per each row 
+    Shop Item | Y |  modal pops up with details and is a appropriate size
+    Cart | Y | Fully Responsive.
+    Checkout | Y | forms stack on top of eachother nicely. 
+    Checkout Success | Y | Fully Responsive.
+
+
+
+### **Mobile Testing**
+-
+  | Page | Responsive| Notes| 
+    --- | --- | ---
+    Landing | Y | Fully Responsive. how it works sections icons stack on top of eachother. 
+    Donate Plans | Y | Fully Responsive.  No horizontal scrollbar. 
+    Donate Overview | Y | Fully Responsive.
+    Login | Y | Forms get smaller 
+    Sign-Up | Y | Forms get smaller 
+    Shop | Y | One items per each row 
+    Shop Item | Y |  modal pops up with details and is a appropriate size
+    Cart | Y | Fully Responsive.
+    Checkout | Y | forms stack on top of eachother nicely. 
+    Checkout Success | Y | Fully Responsive.
 

@@ -60,11 +60,9 @@ def post_save_usermembership_create(
         user_membership.membership = free_membership
         user_membership.save()
 
+
 post_save.connect(post_save_usermembership_create,
                   sender=settings.AUTH_USER_MODEL)
-
-
-
 
 
 class Subscription(models.Model):

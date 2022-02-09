@@ -32,6 +32,7 @@ def all_products(request):
 
     return render(request, 'shop/shop.html', context)
 
+
 @login_required()
 def product_detail(request, product_id):
     """show single product """
