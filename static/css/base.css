@@ -11,10 +11,7 @@
     display: none;
     visibility: hidden;
 }
-.search
-{
-    width: 50%!important;
-}
+
  .navbar-brand
  {
     font-family: 'Dancing Script', cursive;
@@ -285,3 +282,13 @@ a
     font-family: 'Dancing Script', cursive;
 
 }
+.fa-cart-shopping
+{
+    color: var(--purple)!important;
+}
+@media only screen and (min-width: 577px) {
+    .search
+    {
+    width: 50%!important;
+    }
+  }
