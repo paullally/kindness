@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-q_us18_z)wjr$^h@hi2tp4n4@zg6$1m*a9a&b#ofsn-&0#*(sv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['localhost',"kindnesscharity.herokuapp.com"]
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-paullally-kindness-ihh4677y71p.ws-eu30.gitpod.io']
 
