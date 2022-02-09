@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- Renders when a page checkout is completed successfully -->
+<section class="checkout-image">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-12 ">
+        <h2 class="text-center page-head">Order Successful!</h2>
+        <p class="text-center ">Thank you for placing your order!</p>
+        
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section">
+<!-- Renders a summary of the order information & users details -->
+  <h2 class="section-head text-center my-5">Your Order Summary</h2>
+  <p class="text-center section-text ">Order Number : #{{ order.order_number }}</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+        <div class="Order-info">
+          <h5 class="mt-5">Order Information.</h5>
+          <p class=" pt-2">Ordered On: {{ order.date }}</p>
+        </div>
+        <div>
+          <h5 class="mt-5">Delivery Information:</h5>
+          <p class="">Name: {{ order.full_name }}</p>
+          <p>Email: {{ order.email }}</p>
+          <p>Phone: {{ order.phone_number }}</p>
+          <p class="">Address Line 1: {{ order.street_address1 }}</p>
+          <p> {% if order.street_address2 %}Address Line 2: {{ order.street_address2 }}{% endif %}</p>
+          <p>Town/City:  {{ order.town_or_city }} </p>
+          <p> {% if order.postcode %}Postcode:{{ order.postcode }}{% endif %} </p>
+          <p> {% if order.County %} County: {{ order.county }}{% endif %}</p>
+          <p> {% if order.Country %}Country: {{ order.country }} {% endif %}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+{% endblock %}
