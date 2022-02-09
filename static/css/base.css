@@ -2,9 +2,9 @@
     /*p for primary, s for secondary, t for tertiary*/
     --darkpurple:#160C28;
     --purple: #5E2BFF;
-    --darkgreen: #339989;
+    --lightgreen: #339989;
     --green:#7DE2D1;
-    --lightgreen: #023618;
+    --darkgreen: #023618;
   }
   h2 h3 h4 h5 h6 p
   {
@@ -90,7 +90,7 @@
 {
     font-family: 'Roboto', sans-serif;
     font-weight:300;
-    color:var(--darkgreen);
+    color:var(--lightgreen);
     text-align: center;
     padding-bottom: 1rem;
 }
@@ -107,11 +107,11 @@
 }
 .fa-quote-left
 {
-    color: var(--lightgreen)!important;
+    color: var(--darkgreen)!important;
 }
 .fa-quote-right
 {
-    color: var(--lightgreen)!important;
+    color: var(--darkgreen)!important;
 }
 .login-head
 {
@@ -150,7 +150,7 @@ a
 {
     font-family: 'Roboto', sans-serif;
     font-weight:300;
-    background-color: var(--darkgreen)!important;
+    background-color: var(--lightgreen)!important;
     color: white!important;
 }
 .price
@@ -196,7 +196,7 @@ a
     font-size: 20px;
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
-    color: var(--lightgreen)!important;
+    color: var(--darkgreen)!important;
 }
 
 
