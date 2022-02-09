@@ -8,7 +8,7 @@ def view_bag(request):
     """ renders bag """
     return render(request, 'bag/bag.html')
 
-
+@login_required()
 def add_to_bag(request, item_id):
 
     quantity = int(request.POST.get('quantity'))

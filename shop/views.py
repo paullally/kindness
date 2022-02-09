@@ -2,8 +2,10 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from .models import Product
+from django.contrib.auth.decorators import login_required
 
 
+@login_required()
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
 
@@ -30,7 +32,7 @@ def all_products(request):
 
     return render(request, 'shop/shop.html', context)
 
-
+@login_required()
 def product_detail(request, product_id):
     """show single product """
     product = get_object_or_404(Product, pk=product_id)

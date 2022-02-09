@@ -33,7 +33,13 @@
             {% endif %}
             <h6 class="section-text">€{{ member.price }}<sub>/month</sub></h6>
             <hr>
-            <p>Gain access to our exclusive shop</p>
+            {% if member.membership_type == '30' %}
+           <p>We will donate €30 to a charity on your behalf each month</p>
+           {% elif member.membership_type == '20' %}
+           <p>We will donate €20 to a charity on your behalf each month</p>
+           {% else %}
+           <p>We will donate €10 to a charity on your behalf each month</p>
+           {% endif %}
             <form method="POST" action="{% url 'donations'%}">
               {% csrf_token %}
               {% if member.membership_type != users_membership %}

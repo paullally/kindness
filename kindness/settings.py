@@ -28,8 +28,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['localhost',"kindnesscharity.herokuapp.com"]
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-paullally-kindness-ihh4677y71p.ws-eu30.gitpod.io']
-
 
 # Application definition
 
