@@ -93,4 +93,31 @@ Users are able to pick a donation plan of 10,20 or 30 euro and will be charged t
 
 Users will also be able to view our shop once they have an account made. They will be able to view all of our products on offer and also make a one off donation.
 
+#### **Colour Scheme**
+<img src="wireframes/color-scheme.png">
+
+#### **Typography**
+ 
+ - [**Roboto:**](https://fonts.google.com/specimen/Roboto?query=roboto)
+    - The primary font used across this website used in regular and blod font weights.
+
+- [**Dancing Script**](https://fonts.google.com/specimen/Dancing+Script?query=dancing+script)
+    - Dancing Script was used for the navbar logo and headings in a font weight of 100.
+    - This was picked as its is a cursive font that pairs will with roboto. 
+
+### **Frameworks**
+
+- [Django 3.0](https://docs.djangoproject.com/en/3.0/releases/3.0/) 
+    - Django is a free and open-source web framework that I've used to render the back-end Python code with the front-end code. 
+
+- [JQuery](https://code.jquery.com/jquery/)
+    - In order to minimalize the amount of Javascript used across the application, I chose to implement a lot of the JS functionality with JQuery.
+
+
+- [Boostrap](https://getbootstrap.com/)
+    - Bootstrap was used to help with styling of each page and also to make each page fully responsive. 
+### **Icons**
+
+- [Font Awesome](https://fontawesome.com/)
+    - All Icons used we gotten from font awesome.
 
