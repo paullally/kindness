@@ -29,6 +29,7 @@
                         <h6 >Details</h6>
                         {{ order_form.full_name | as_crispy_field }}
                         {{ order_form.email | as_crispy_field }}
+                        {{ order_form.phone_number | as_crispy_field }}
                     </fieldset>
                     <fieldset class="px-3">
                         <h6>Payment</h6>
@@ -43,13 +44,12 @@
             <div class="col-lg-6 col-sm-12">
                 <fieldset class="rounded px-3 mb-5">
                     <h6>Delivery</h6>
-                    {{ order_form.phone_number | as_crispy_field }}
-                    {{ order_form.country | as_crispy_field }}
-                    {{ order_form.postcode | as_crispy_field }}
-                    {{ order_form.town_or_city | as_crispy_field }}
                     {{ order_form.street_address1 | as_crispy_field }}
                     {{ order_form.street_address2 | as_crispy_field }}
+                    {{ order_form.town_or_city | as_crispy_field }}
+                    {{ order_form.postcode | as_crispy_field }}
                     {{ order_form.county | as_crispy_field }}
+                    {{order_form.country | as_crispy_field }}
 
                 </fieldset>
                

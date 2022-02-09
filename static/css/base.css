@@ -34,7 +34,7 @@
 }
 .page-subhead
 {
-    font-family: 'Bitter', serif;
+    font-family: 'Roboto', sans-serif;
     font-size:1.5rem;
 }
 
@@ -47,10 +47,10 @@
     padding-top: 4rem;
 }
 .section-text{
-    font-family: 'Bitter', serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.2rem;
 }
-.sectionhead
+.section-head
 {
     font-family: 'Roboto', sans-serif;
     font-size: 2rem;

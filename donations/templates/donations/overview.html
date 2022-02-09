@@ -34,8 +34,9 @@
     <p class="text-center details">Street Address 1: {{ current_membership.street_address1 }}</p>
      <p class="text-center details"> {% if current_membership.street_address2 %}Street Address 2: {{ current_membership.street_address2 }}{% endif %}</p>
      <p class="text-center details">Town/City: {{ current_membership.town_or_city }}</p>
-    <p class="text-center details">{% if current_membership.county%}County:{{ current_membership.county }}{% endif %}</p>
     <p class="text-center details">{% if current_membership.postcode %}Postcode:{{ current_membership.postcode }}{% endif %}</p>
+    <p class="text-center details">{% if current_membership.county%}County:{{ current_membership.county }}{% endif %}</p>
+    <p class="text-center details">{% if current_membership.county%}County:{{ current_membership.country }}{% endif %}</p>
   </div>
 </div>
   </div>
