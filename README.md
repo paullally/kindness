@@ -68,4 +68,29 @@
 
 - <a href=#acknowledgements><h3><strong>Acknowledgements</strong></h3></a>
 
+<h2 align=center id="UX"><strong>User Experience</strong></h2>
+
+- #### **User Stories**
+    1. **As a user**, I want the website to be fully reponsive. 
+    2. **As a user**, I want to be able to login
+    3. **As a user**, I want to be able to donate to charity on a monthly basis. 
+    4. **As a user**, I want to be able to cancel my monthly donation. 
+    5. **As a user**, I want to be able to edit the monthly donation i have set up. 
+    6. **As a user**, I want all information to be displayed on the home page. 
+    7. **As a user**, I want to be able to be able to view a shop. 
+    9. **As a user**, I  want to be able to edit and delete items in my shopping basket.
+    10. **As a user**, I get extra information about the product i am about to purchase.
+
+#### **Design**
+
+**Kindness** is a fully resposnive simple website that is split into two sections 
+
+**Donations:**
+
+Users are able to pick a donation plan of 10,20 or 30 euro and will be charged that price on a monthly basis. all the money donated will go to charity 
+
+**Shop:**
+
+Users will also be able to view our shop once they have an account made. They will be able to view all of our products on offer and also make a one off donation.
+
 
