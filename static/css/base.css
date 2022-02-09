@@ -296,6 +296,7 @@ a
 {
     color: var(--purple)!important;
 }
+
 @media only screen and (min-width: 577px) {
     .search
     {
