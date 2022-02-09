@@ -76,11 +76,7 @@
     </div>
     </main>
  
-    {% if request.user.is_authenticated %}
-    {% include "components/footer_auth.html"%}
-     {%else%}
-   {% include "components/footer_noauth.html"%}
-   {% endif%}
+
     {% block postloadjs %}
     {% endblock %}
 
