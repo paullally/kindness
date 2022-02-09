@@ -27,27 +27,19 @@
     - [**Current Features**](#current-features)
         - [**Features on every page**](#features-on-every-page)
         - [**Landing Page**](#landing-page)
-        - [**Dashboard**](#dashboard)
-        - [**Subscription Overview**](#subscription-overview)
+        - [**Donation Page**](#donation)
         - [**Shop**](#shop)
-        - [**Shop Items**](#shop-items)
         - [**Login/Register**](#login-register)
-        - [**Payments**](#payments)
-        - [**About**](#about)
-        - [**Contact**](#contact)
+        - [**Chekout**](#checkout)
     - [**Future Features**](#future-features)
 
-- <a href=#da><h3><strong>Database Architecture</strong></h3></a>
-    - [**Database Used**](#database-used)
-    - [**Database Models**](#database-models)
-        - [**Categories Model**](#categories)
-        - [**Current Items**](#current-items)
-        - [**Future Items**](#future-items)
-        - [**Membership**](#membership)
-        - [**User Membership**](#user-membership)
-        - [**Subscription**](#subscription)
-        - [**Order**](#order)
-        - [**Order Line Item**](#order-line-item)
+- <a href=#da><h3><strong>Database Architecture</strong></h3></a>  
+    - [**Categories**](#categories)
+    - [**Products**](#product)
+    - [**Membership**](#membership)
+    - [**User Membership**](#user-membership)
+    - [**Subscription**](#subscription)
+    - [**Order**](#order)
 
 - <a href=#TU><h3><strong>Technologies Used</strong></h3></a>
     - [**Front End Technologies**](#front-end-technologies)
@@ -152,9 +144,9 @@ h2 align=center id="features"><strong>Features</strong></h2>
 
 - **Navbar**
     - Kindness have a nav bar on every page that will change depending on weather users are logged in or out also it will have a hamburger menu on smaller screen sizes 
-        - [**Logged In*](wireframes/loggedin.png)
-        - [**Logged Out*](wireframes/loggedout.png)
-        - [**Mobile*](wireframes/smallscreen.png)
+        - [**Logged In**](wireframes/loggedin.png)
+        - [**Logged Out**](wireframes/loggedout.png)
+        - [**Mobile**](wireframes/smallscreen.png)
 
 
 ### **Landing Page**
@@ -193,4 +185,88 @@ There are 2 core Donation pages
 
 1. A monthly news letter that will give users information about the charities we have picked.
 2. A way for users to vote on which charity will be recieving that months donations
+
+## **Database Architecture**
+
+#### **Categories**
+- This model contains information on all the categories that the store sells.
+
+    | Name | Key in db | Validation | Data type |
+    --- | --- | --- | --- 
+    Category | Category | max_length=150 | CharField 
+
+#### **Products**
+- This model is found within the shop app. It holds all the information for the items for sale within the current month's shop. 
+
+    | Name | Key in db | Validation | Data type |
+    --- | --- | --- | --- 
+    Category | Category | max_length=150 | CharField 
+    Product ID | pid | max_length=50 | CharField
+    Product Name | name | max_length=150 | CharField
+    Product Description | description | max_length=500 | TextField
+    Product Price | price | max_digits=6, decimal_places=2| DecimalField
+    Product Image URL | image_url | max_length=1024, null=True, blank=True | URLField
+    Product Image | image | null=True, blank=True | ImageField
+
+
+
+#### **Membership**
+- This model is found within the Memberships app. This model contains the relevant information for the three membership choices - free, regular & premium. 
+
+    | Name | Key in db | Validation | Data type |
+    --- | --- | --- | --- 
+    Membership Type | membership_type | choices=MEMBERSHIP_CHOICES,default='Free',max_length=200, null=False, blank=False  | CharField
+    Monthly Cost | price | deafult=15 | IntegerField
+    Membership Description | description_one |  | TextField
+    Membership Description | description_two |  | TextField
+    Membership Description | description_three |  | TextField
+    Membership Description | description_four |  | TextField
+    Stripe Price ID | stripe_plan_id | max_length=40 | CharField
+
+#### **User Membership**
+- This is found in the memberships app.  The User Membership model holds information on each user's membership.  This will default to free if a user does not have a subscription. 
+
+    | Name | Key in db | Validation | Data type |
+    --- | --- | --- | --- 
+    Logged in User | user | settings.AUTH_USER_MODEL, on_delete=models.CASCADE  | OneToOneField
+    Stripe Customer ID | stripe_customer_id | max_length=40 | CharField
+    User Full Name | full_name | max_length=200,  null=False | TextField
+    User Email Address | email | max_length=254,  null=False | EmailField
+    User Phone Number | phone_number | max_length=30,  null=False | CharField
+    User Address Line 1 | street_address1 | max_length=80,  null=False | CharField
+    User Address Line 2 | street_address1 | max_length=80,  null=False | CharField
+    User Town/City | town_or_city | max_length=40,  null=False | CharField
+    User County | county | max_length=80,  null=False | CharField
+    User Country | country | max_length=80,  null=False | CharField
+    User Postcode | postcode | max_length=500,  null=False | CharField
+
+#### **Subscription**
+- This model is found in the memberships app.  It holds the information on the subscription if the user has an active subscription and the strip subscription ID. It links to the User Membership. 
+
+    | Name | Key in db | Validation | Data type |
+    --- | --- | --- | --- 
+    User Membership Type | user_membership | UserMembership, on_delete=models.CASCADE | ForeignKey
+    Stripe Subscription ID | stripe_subscription_id | max_length=40 | CharField
+    Subscription Active | active | default=False | BooleanField
+
+
+#### **Orders**
+- An instance of the Order model is created before any OrderItems, as the latter relies on the former for a ForeignKey.
+
+    | Name | Key in db | Validation | Data type |
+    --- | --- | --- | --- 
+    Order Number | user_membership | UserMembership, on_delete=models.CASCADE | ForeignKey
+    User Full Name | full_name | max_length=200,  null=False | TextField
+    User Email Address | email | max_length=254,  null=False | EmailField
+    User Phone Number | phone_number | max_length=30,  null=False | CharField
+    User Address Line 1 | street_address1 | max_length=80,  null=False | CharField
+    User Address Line 2 | street_address1 | max_length=80,  null=False | CharField
+    User Town/City | town_or_city | max_length=40,  null=False | CharField
+    User County | county | max_length=80,  null=False | CharField
+    User Country | country | max_length=80,  null=False | CharField
+    User Postcode | postcode | max_length=500,  null=False | CharField
+    Date | postcode | auto_now_add=True | DateTimeField
+    Order Total| postcode | max_digits=10,decimal_places=2,null=False,default=0 | DecimalField
+    Grand Total | postcode | max_digits=10,decimal_places=2,null=False,default=0 | DecimalField
+
 
