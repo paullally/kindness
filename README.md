@@ -134,7 +134,7 @@ Users will also be able to view our shop once they have an account made. They wi
     - [**Signup page**](wireframes/tablet/signuptablet.png)
     - [**Shop page**](wireframes/tablet/shoptablet.png)
     - [**Checkout**](wireframes/tablet/checkouttablet.png)
-    - [**Subscription-Overview**](wireframes/tablet/overviewtablet.png)
+    - [**Donation-Overview**](wireframes/tablet/overviewtablet.png)
 
 - #### **Mobile**
     - [**Landing pagee*](wireframes/mobile/landingmobile.png)
@@ -142,5 +142,55 @@ Users will also be able to view our shop once they have an account made. They wi
     - [**Signup page**](wireframes/mobile/signupmobile.png)
     - [**Shop page**](wireframes/mobile/shopmobile.png)
     - [**Checkout**](wireframes/mobile/checkoutmobile.png)
-    - [**Subscription-Overview**](wireframes/mobile/overviewmobile.png)
- 
+    - [**Donation-Overview**](wireframes/mobile/overviewmobile.png)
+
+h2 align=center id="features"><strong>Features</strong></h2>
+
+### **Current Features**
+
+#### **Features on every page**
+
+- **Navbar**
+    - Kindness have a nav bar on every page that will change depending on weather users are logged in or out also it will have a hamburger menu on smaller screen sizes 
+        - [**Logged In*](wireframes/loggedin.png)
+        - [**Logged Out*](wireframes/loggedout.png)
+        - [**Mobile*](wireframes/smallscreen.png)
+
+
+### **Landing Page**
+The landing page is split into three core components: 
+
+- **Main Landing Section**
+    - This section has a simple welcome message and the a small paragraph about kindness
+- **How it works Section**
+    -this is split in to 3 topics which give a user a general idea on that the website is about 
+- **Testimonials Section**
+   - this section has a carosel with two ficticous testimonials.
+
+### **Donation**
+There are 2 core Donation pages 
+#### **Overview**
+- **Not Donated**
+    - When you have not donated this page will have a heading explaining this and a link to donate.
+- **Donated**
+    - When you have donated 3 cards will be on this page giving information about , Your details, Billing address and donation plan.
+#### **Donation options**
+    - This page will display 3 card with the 3 donations choices and a button that will allow you to donate or change donation
+
+### **Shop**
+- The Shop page contains a search bar and a link to your cart each shop item will be displayed on a card. This card will contain an image,product name which you can click to  get a better description of the product and finally an add to cart button.
+-The shop details is a modal that will appear over the shop page. this modal will display all extra information about the product.
+
+
+### **Login Register**
+- The Log in and register pages a quite similar with images on the left hand side and the respective forms on the right hand side
+### **Checkouts**
+- There are two checkout pages one for the shop and one for the donations. Each page has the same form that will ask for users personal details and billing information, and the on the shop checkout page below this information there will be a overview of what you have ordered.
+
+
+
+#### **Future Features**
+
+1. A monthly news letter that will give users information about the charities we have picked.
+2. A way for users to vote on which charity will be recieving that months donations
+
