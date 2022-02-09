@@ -136,7 +136,7 @@ Users will also be able to view our shop once they have an account made. They wi
     - [**Checkout**](wireframes/mobile/checkoutmobile.png)
     - [**Donation-Overview**](wireframes/mobile/overviewmobile.png)
 
-h2 align=center id="features"><strong>Features</strong></h2>
+<h2 align=center id="features"><strong>Features</strong></h2>
 
 ### **Current Features**
 
@@ -186,7 +186,9 @@ There are 2 core Donation pages
 1. A monthly news letter that will give users information about the charities we have picked.
 2. A way for users to vote on which charity will be recieving that months donations
 
-## **Database Architecture**
+
+
+<h2 align=center id="DA"><strong>Database Architecture</strong></h2>
 
 #### **Categories**
 - This model contains information on all the categories that the store sells.
@@ -268,5 +270,36 @@ There are 2 core Donation pages
     Date | postcode | auto_now_add=True | DateTimeField
     Order Total| postcode | max_digits=10,decimal_places=2,null=False,default=0 | DecimalField
     Grand Total | postcode | max_digits=10,decimal_places=2,null=False,default=0 | DecimalField
+
+
+<h2 align=center><strong>Technologies Used</strong></h2>
+
+- ### **Front End Technologies**
+    - **HTML**
+    - **CSS**
+    - [**JQuery**](https://jquery.com/) to reduce javascript code.
+    - [**Stripe**](https://stripe.com/) as a payment platfom.
+    - [**AWS S3**](http://aws.amazon.com/) to store images held in the database
+    - [**Boostrap**](https://getbootstrap.com/) used to make website pages fully responsive 
+
+- ### **Backend Technologies**
+    - [**Python**](https://www.python.org/) 
+    - [**Django 3.0**](https://docs.djangoproject.com/en/3.0/releases/3.0/) the backend framework
+    - [**Heroku**](http://heroku.com/) used to host website
+    - [**PostgreSQL**](https://www.postgresql.org/) for heroku database
+    - [**SQLite**](https://www.sqlite.org/index.html) for development database
+
+- ### **Other Tools Used** 
+    - [**Gitpod**](http://gitpod.io/) the cloud based IDE used for development 
+    - [**Github**](https://github.com/) to store and share all project code remotely.
+    - [**Balsamiq**](https://balsamiq.com/) used for wireframes 
+    - [**AutoPep8**](https://pypi.org/project/autopep8/)  to format code into PEP8 formatting. 
+    - [**Boto3**](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) to enable the creation, configuration, and management of AWS S3.
+    - [**Django allauth**](https://django-allauth.readthedocs.io/en/latest/installation.html) to create the signup/login functionality across the site. 
+    - [**Django Crispy Forms**](https://django-crispy-forms.readthedocs.io/en/latest/)  to style Django forms.
+    - [**Django Storages**](https://django-storages.readthedocs.io/en/latest/) a collection of custom storage backends with Django to work with boto3 and AWS S3.
+    - [**Gunicorn**](https://pypi.org/project/gunicorn/)  WSGI HTTP Server for UNIX to aid in the deployment of the Django project to Heroku.
+    - [**Pillow**](https://pillow.readthedocs.io/en/stable/) a python imaging library to aid in processing image files to store in the database.
+    - [**Psycopg2**](https://pypi.org/project/psycopg2/) as PostgreSQL database adapter for Python.
 
 
