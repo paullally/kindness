@@ -108,7 +108,7 @@ Users will also be able to view our shop once they have an account made. They wi
 ### **Frameworks**
 
 - [Django 3.0](https://docs.djangoproject.com/en/3.0/releases/3.0/) 
-    - Django is a free and open-source web framework that I've used to render the back-end Python code with the front-end code. 
+    - Django was used to render the back-end Python code with the front-end code. 
 
 - [JQuery](https://code.jquery.com/jquery/)
     - In order to minimalize the amount of Javascript used across the application, I chose to implement a lot of the JS functionality with JQuery.
@@ -121,3 +121,26 @@ Users will also be able to view our shop once they have an account made. They wi
 - [Font Awesome](https://fontawesome.com/)
     - All Icons used we gotten from font awesome.
 
+- #### **Desktop**
+    - [**Landing page**](wireframes/desktop/ms4landingdesktop.png)
+    - [**Login page**](wireframes/desktop/logindesktop.png)
+    - [**Signup page**](wireframes/desktop/signupdesktop.png)
+    - [**Shop page**](wireframes/desktop/shopdesktop.png)
+    - [**Checkout**](wireframes/desktop/checkoutdesktop.png)
+    - [**Subscription-Overview**](wireframes/tablet/overviewdesktop.png)
+- #### **Tablet**
+    - [**Landing page**](wireframes/tablet/landingtablet.png)
+    - [**Login page**](wireframes/tablet/logintablet.png)
+    - [**Signup page**](wireframes/tablet/signuptablet.png)
+    - [**Shop page**](wireframes/tablet/shoptablet.png)
+    - [**Checkout**](wireframes/tablet/checkouttablet.png)
+    - [**Subscription-Overview**](wireframes/tablet/overviewtablet.png)
+
+- #### **Mobile**
+    - [**Landing pagee*](wireframes/mobile/landingmobile.png)
+    - [**Login page**](wireframes/mobile/loginmobile.png)
+    - [**Signup page**](wireframes/mobile/signupmobile.png)
+    - [**Shop page**](wireframes/mobile/shopmobile.png)
+    - [**Checkout**](wireframes/mobile/checkoutmobile.png)
+    - [**Subscription-Overview**](wireframes/mobile/overviewmobile.png)
+ 
