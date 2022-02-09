@@ -6,6 +6,7 @@ urlpatterns = [
    path('plan/', views.donations, name='donations'),
    path('subscribe/', views.subscribe, name='subscribe'),
    path('cancel/', views.cancelSubscription, name='cancelSubscription'),
+   path('choice/', views.loggedout, name='loggedout'),
    
    
 ]

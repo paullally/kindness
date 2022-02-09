@@ -162,3 +162,9 @@ def cancelSubscription(request):
         messages.SUCCESS,
         'Error')
     return redirect(reverse('overview'))
+
+
+
+def loggedout(request):
+    """render homepage """
+    return render(request, 'donations/donations_logedout.html')
