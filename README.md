@@ -1,17 +1,17 @@
 
-div align=center
+<div align=center>
 
 # [**Kindness**](https://kindnesscharity.herokuapp.com/)
 
-/div
+</div>
 
 **Kindness** is a Charity that allows users to set up monthly donation plans to a charity selected by us each month, users will also have access to our shop.
 
 ---
 
-h2 align=center id="top"strongTable of Contents/strong/h2
+<h2 align=center id="top"><strong>Table of Contents</strong></h2>
 
-- a href=#UXh3strongUser Experience/strong/h3/a
+- <a href=#UX><h3><strong>User Experience</strong></h3></a>
     - [**User Stories**](#user-stories)
     - [**Design**](#design)
         - [**Colour Scheme**](#colour-scheme)
@@ -23,7 +23,7 @@ h2 align=center id="top"strongTable of Contents/strong/h2
             - [**Tablet**](#tablet)
             - [**Mobile**](#mobile)
 
-- a href=#featuresh3strongFeatures/strong/h3/a
+- <a href=#features><h3><strong>Features</strong></h3></a>
     - [**Current Features**](#current-features)
         - [**Features on every page**](#features-on-every-page)
         - [**Landing Page**](#landing-page)
@@ -33,7 +33,7 @@ h2 align=center id="top"strongTable of Contents/strong/h2
         - [**Chekout**](#checkout)
     - [**Future Features**](#future-features)
 
-- a href=#dah3strongDatabase Architecture/strong/h3/a  
+- <a href=#da><h3><strong>Database Architecture</strong></h3></a>  
     - [**Categories**](#categories)
     - [**Products**](#product)
     - [**Membership**](#membership)
@@ -41,12 +41,12 @@ h2 align=center id="top"strongTable of Contents/strong/h2
     - [**Subscription**](#subscription)
     - [**Order**](#order)
 
-- a href=#TUh3strongTechnologies Used/strong/h3/a
+- <a href=#TU><h3><strong>Technologies Used</strong></h3></a>
     - [**Front End Technologies**](#front-end-technologies)
     - [**Backend Technologies**](#back-end-technologies)
     - [**Other Tools Used**](#other-tools-used)
 
--  a href=#Th3strongTesting/strong/h3/a
+-  <a href=#T><h3><strong>Testing</strong></h3></a>
     - [**Code Testing**](#code-testing)
     - [**Validator Testing**](#validator-testing)
     - [**User Story Testing**](#User-Story-Testing)
@@ -55,18 +55,18 @@ h2 align=center id="top"strongTable of Contents/strong/h2
     - [**Responsive Testing**](#responsive-testing)
     - [**Bug Report**](#bug-report)
 
-- a href=#deploymenth3strongDeployment/strong/h3/a
+- <a href=#deployment><h3><strong>Deployment</strong></h3></a>
     - [**Local Deployment**](#local-deployment)
     - [**Heroku Deployment**](#heroku-deployment)
 
-- a href=#creditsh3strongCredits/strong/h3/a
+- <a href=#credits><h3><strong>Credits</strong></h3></a>
     - [**Code**](#code)
     - [**Media**](#media)
     - [**Content**](#content)
 
-- a href=#acknowledgementsh3strongAcknowledgements/strong/h3/a
+- <a href=#acknowledgements><h3><strong>Acknowledgements</strong></h3></a>
 
-h2 align=center id="UX"strongUser Experience/strong/h2
+<h2 align=center id="UX"><strong>User Experience</strong></h2>
 
 - #### **User Stories**
     1. **As a user**, I want the website to be fully reponsive. 
@@ -92,7 +92,7 @@ Users are able to pick a donation plan of 10,20 or 30 euro and will be charged t
 Users will also be able to view our shop once they have an account made. They will be able to view all of our products on offer and also make a one off donation.
 
 #### **Colour Scheme**
-img src="wireframes/color-scheme.png"
+<img src="wireframes/color-scheme.png">
 
 #### **Typography**
  
@@ -135,14 +135,14 @@ img src="wireframes/color-scheme.png"
     - [**Donation-Overview**](wireframes/tablet/overviewtablet.png)
 
 - #### **Mobile**
-    - [**Landing pagee*](wireframes/mobile/landingmobile.png)
+    - [**Landing page**](wireframes/mobile/landingmobile.png)
     - [**Login page**](wireframes/mobile/loginmobile.png)
     - [**Signup page**](wireframes/mobile/signupmobile.png)
     - [**Shop page**](wireframes/mobile/shopmobile.png)
     - [**Checkout**](wireframes/mobile/checkoutmobile.png)
     - [**Donation-Overview**](wireframes/mobile/overviewmobile.png)
 
-h2 align=center id="features"strongFeatures/strong/h2
+<h2 align=center id="features"><strong>Features</strong></h2>
 
 ### **Current Features**
 
@@ -194,7 +194,7 @@ There are 2 core Donation pages
 
 
 
-h2 align=center id="DA"strongDatabase Architecture/strong/h2
+<h2 align=center id="DA"><strong>Database Architecture</strong></h2>
 
 #### **Categories**
 - This model contains information on all the categories that the store sells.
@@ -278,7 +278,7 @@ h2 align=center id="DA"strongDatabase Architecture/strong/h2
     Grand Total | postcode | max_digits=10,decimal_places=2,null=False,default=0 | DecimalField
 
 
-h2 align=center id="TU"strongTechnologies Used/strong/h2
+<h2 align=center id="TU"><strong>Technologies Used</strong></h2>
 
 - ### **Front End Technologies**
     - **HTML**
@@ -309,7 +309,7 @@ h2 align=center id="TU"strongTechnologies Used/strong/h2
     - [**Psycopg2**](https://pypi.org/project/psycopg2/) as PostgreSQL database adapter for Python.
 
 
-h2 align=center id='T'strongTesting/strong/h2
+<h2 align=center id='T'><strong>Testing</strong></h2>
 
 ### **Code Testing**
 #### **validator testing**
@@ -347,7 +347,7 @@ This warning was because of my h1 elements on the ladning page as two of the con
     - Cyclomatic complexity number for this function is 1.
     - One undefined variable $ 
 
-h2 align=center id="top"img src="static/images/jsvalid.png" max-height=50px/h2
+<h2 align=center id="top"><img src="static/images/jsvalid.png" max-height=50px></h2>
 
 
 [Python PEP8](https://pypi.org/project/autopep8/)
@@ -385,11 +385,11 @@ manual testing was completed to make sure each page was fully responsive.
 
 A desktop Lighthouse report was completed on the kindness website
 The results were as follows:
-h2 align=center id="top"img src="wireframes/desktop.png" max-height=100px/h2
+<h2 align=center id="top"><img src="wireframes/desktop.png" max-height=100px></h2>
 
 A mobile Lighthouse report was completed on the kindess website
 The results were as follows:
-h2 align=center id="top"img src="wireframes//mobile.png" max-height=100px/h2
+<h2 align=center id="top"><img src="wireframes//mobile.png" max-height=100px></h2>
 
 ### **Desktop Testing**
 -
@@ -432,7 +432,7 @@ h2 align=center id="top"img src="wireframes//mobile.png" max-height=100px/h2
     Checkout | Y | forms stack on top of eachother nicely. 
     Checkout Success | Y | Fully Responsive.
 
-h2 align=center id="deployment"strongDeployment/strong/h2
+<h2 align=center id="deployment"><strong>Deployment</strong></h2>
 
 ### **Local Deployment**
 
