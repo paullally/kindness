@@ -53,7 +53,6 @@
     - [**Manual Testing**](#manual-testing)
     - [**Lighthouse**](#lighthouse)
     - [**Responsive Testing**](#responsive-testing)
-    - [**Bug Report**](#bug-report)
 
 - <a href=#deployment><h3><strong>Deployment</strong></h3></a>
     - [**Local Deployment**](#local-deployment)
@@ -391,6 +390,7 @@ A mobile Lighthouse report was completed on the kindess website
 The results were as follows:
 <h2 align=center id="top"><img src="wireframes//mobile.png" max-height=100px></h2>
 
+## **Responsive Testing**
 ### **Desktop Testing**
 -
     | Page | Responsive| Notes| 
