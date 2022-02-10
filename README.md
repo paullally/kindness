@@ -515,3 +515,22 @@ br
 10) View the app
 12) Navigate to the admin panel & create the Memberships in order to get the site to function correctly.
 
+<h2 align=center id="credits"><strong>Credits</strong></h2>
+
+### **Code** 
+
+- The Subscription service was created based on this [Just Django Tutorial](https://www.youtube.com/watch?v=zu2PBUHMEew&t=7506s)
+- The shop section was inspired by the Code Institute Boutique Ado mini-project. 
+
+### **Media**
+- Images were takes from [Pexels](https://www.pexels.com) and [UnDraw](https://undraw.co/)
+
+### **Content**
+- All content within the site was written by myself
+
+<h2 align=center id="acknowledgements"><strong>Acknowledgements</strong></h2>
+
+- Thanks to my Mentor [Chris Quinn](https://github.com/10xOXR) for help with this project.
+
+
+<br>
