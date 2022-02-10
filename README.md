@@ -43,7 +43,7 @@
 
 - <a href=#TU><h3><strong>Technologies Used</strong></h3></a>
     - [**Front End Technologies**](#front-end-technologies)
-    - [**Backend Technologies**](#back-end-technologies)
+    - [**Backend Technologies**](#backend-technologies)
     - [**Other Tools Used**](#other-tools-used)
 
 -  <a href=#T><h3><strong>Testing</strong></h3></a>
@@ -182,7 +182,7 @@ There are 2 core Donation pages
 
 ### **Login Register**
 - The Log in and register pages a quite similar with images on the left hand side and the respective forms on the right hand side
-### **Checkouts**
+### **Checkout**
 - There are two checkout pages one for the shop and one for the donations. Each page has the same form that will ask for users personal details and billing information, and the on the shop checkout page below this information there will be a overview of what you have ordered.
 
 
