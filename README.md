@@ -35,7 +35,7 @@
 
 - <a href=#da><h3><strong>Database Architecture</strong></h3></a>  
     - [**Categories**](#categories)
-    - [**Products**](#product)
+    - [**Products**](#products)
     - [**Membership**](#membership)
     - [**User Membership**](#user-membership)
     - [**Subscription**](#subscription)
