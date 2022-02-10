@@ -1,17 +1,17 @@
 
-<div align=center>
+div align=center
 
 # [**Kindness**](https://kindnesscharity.herokuapp.com/)
 
-</div>
+/div
 
 **Kindness** is a Charity that allows users to set up monthly donation plans to a charity selected by us each month, users will also have access to our shop.
 
 ---
 
-<h2 align=center id="top"><strong>Table of Contents</strong></h2>
+h2 align=center id="top"strongTable of Contents/strong/h2
 
-- <a href=#UX><h3><strong>User Experience</strong></h3></a>
+- a href=#UXh3strongUser Experience/strong/h3/a
     - [**User Stories**](#user-stories)
     - [**Design**](#design)
         - [**Colour Scheme**](#colour-scheme)
@@ -23,7 +23,7 @@
             - [**Tablet**](#tablet)
             - [**Mobile**](#mobile)
 
-- <a href=#features><h3><strong>Features</strong></h3></a>
+- a href=#featuresh3strongFeatures/strong/h3/a
     - [**Current Features**](#current-features)
         - [**Features on every page**](#features-on-every-page)
         - [**Landing Page**](#landing-page)
@@ -33,7 +33,7 @@
         - [**Chekout**](#checkout)
     - [**Future Features**](#future-features)
 
-- <a href=#da><h3><strong>Database Architecture</strong></h3></a>  
+- a href=#dah3strongDatabase Architecture/strong/h3/a  
     - [**Categories**](#categories)
     - [**Products**](#product)
     - [**Membership**](#membership)
@@ -41,12 +41,12 @@
     - [**Subscription**](#subscription)
     - [**Order**](#order)
 
-- <a href=#TU><h3><strong>Technologies Used</strong></h3></a>
+- a href=#TUh3strongTechnologies Used/strong/h3/a
     - [**Front End Technologies**](#front-end-technologies)
     - [**Backend Technologies**](#back-end-technologies)
     - [**Other Tools Used**](#other-tools-used)
 
--  <a href=#T><h3><strong>Testing</strong></h3></a>
+-  a href=#Th3strongTesting/strong/h3/a
     - [**Code Testing**](#code-testing)
     - [**Validator Testing**](#validator-testing)
     - [**User Story Testing**](#User-Story-Testing)
@@ -55,18 +55,18 @@
     - [**Responsive Testing**](#responsive-testing)
     - [**Bug Report**](#bug-report)
 
-- <a href=#deployment><h3><strong>Deployment</strong></h3></a>
+- a href=#deploymenth3strongDeployment/strong/h3/a
     - [**Local Deployment**](#local-deployment)
     - [**Heroku Deployment**](#heroku-deployment)
 
-- <a href=#credits><h3><strong>Credits</strong></h3></a>
+- a href=#creditsh3strongCredits/strong/h3/a
     - [**Code**](#code)
     - [**Media**](#media)
     - [**Content**](#content)
 
-- <a href=#acknowledgements><h3><strong>Acknowledgements</strong></h3></a>
+- a href=#acknowledgementsh3strongAcknowledgements/strong/h3/a
 
-<h2 align=center id="UX"><strong>User Experience</strong></h2>
+h2 align=center id="UX"strongUser Experience/strong/h2
 
 - #### **User Stories**
     1. **As a user**, I want the website to be fully reponsive. 
@@ -92,7 +92,7 @@ Users are able to pick a donation plan of 10,20 or 30 euro and will be charged t
 Users will also be able to view our shop once they have an account made. They will be able to view all of our products on offer and also make a one off donation.
 
 #### **Colour Scheme**
-<img src="wireframes/color-scheme.png">
+img src="wireframes/color-scheme.png"
 
 #### **Typography**
  
@@ -142,7 +142,7 @@ Users will also be able to view our shop once they have an account made. They wi
     - [**Checkout**](wireframes/mobile/checkoutmobile.png)
     - [**Donation-Overview**](wireframes/mobile/overviewmobile.png)
 
-<h2 align=center id="features"><strong>Features</strong></h2>
+h2 align=center id="features"strongFeatures/strong/h2
 
 ### **Current Features**
 
@@ -194,7 +194,7 @@ There are 2 core Donation pages
 
 
 
-<h2 align=center id="DA"><strong>Database Architecture</strong></h2>
+h2 align=center id="DA"strongDatabase Architecture/strong/h2
 
 #### **Categories**
 - This model contains information on all the categories that the store sells.
@@ -278,7 +278,7 @@ There are 2 core Donation pages
     Grand Total | postcode | max_digits=10,decimal_places=2,null=False,default=0 | DecimalField
 
 
-<h2 align=center id="TU"><strong>Technologies Used</strong></h2>
+h2 align=center id="TU"strongTechnologies Used/strong/h2
 
 - ### **Front End Technologies**
     - **HTML**
@@ -309,7 +309,7 @@ There are 2 core Donation pages
     - [**Psycopg2**](https://pypi.org/project/psycopg2/) as PostgreSQL database adapter for Python.
 
 
-<h2 align=center id='T'><strong>Testing</strong></h2>
+h2 align=center id='T'strongTesting/strong/h2
 
 ### **Code Testing**
 #### **validator testing**
@@ -347,7 +347,7 @@ This warning was because of my h1 elements on the ladning page as two of the con
     - Cyclomatic complexity number for this function is 1.
     - One undefined variable $ 
 
-<h2 align=center id="top"><img src="static/images/jsvalid.png" max-height=50px></h2>
+h2 align=center id="top"img src="static/images/jsvalid.png" max-height=50px/h2
 
 
 [Python PEP8](https://pypi.org/project/autopep8/)
@@ -385,11 +385,11 @@ manual testing was completed to make sure each page was fully responsive.
 
 A desktop Lighthouse report was completed on the kindness website
 The results were as follows:
-<h2 align=center id="top"><img src="wireframes/desktop.png" max-height=100px></h2>
+h2 align=center id="top"img src="wireframes/desktop.png" max-height=100px/h2
 
 A mobile Lighthouse report was completed on the kindess website
 The results were as follows:
-<h2 align=center id="top"><img src="wireframes//mobile.png" max-height=100px></h2>
+h2 align=center id="top"img src="wireframes//mobile.png" max-height=100px/h2
 
 ### **Desktop Testing**
 -
@@ -431,4 +431,87 @@ The results were as follows:
     Cart | Y | Fully Responsive.
     Checkout | Y | forms stack on top of eachother nicely. 
     Checkout Success | Y | Fully Responsive.
+
+h2 align=center id="deployment"strongDeployment/strong/h2
+
+### **Local Deployment**
+
+br
+
+1) Having your own IDE such as VS Code or Pycharm.  You will also need to ensure you have PIP, Python3 and GIT
+installed. You will also need Stripe for the checkout functionality of this website
+
+2) Then you will need to save a copy of this repository to your computer. 
+
+3) Then in the CLI, enter the following command:
+
+        git clone https://github.com/paullally/kindness
+
+4) Open your IDE, unzip the folder downloaded, and use the `cd` command in the terminal to navigate to the root directory for the project. 
+
+5) Install the requirements.txt file
+
+
+6) Create an env.py file 
+    - In here, you need to have the following env variables: 
+        - **os.environ["SECRET_KEY"]** = This key is your Django secret key, that generates when you install Django. 
+        - **os.environ["STRIPE_PUBLIC_KEY"]** = his key is obtained when you set up stripe.
+        - **os.environ["STRIPE_SECRET_KEY"]** = his key is obtained when you set up stripe.
+        - **os.environ["EMAIL_HOST_USER"]** = This is your email address
+        - **os.environ["EMAIL_HOST_PASS"]** = Your email password generated from apps.
+
+7) Migrate your models using :
+
+        python manage.py migrate
+
+8) You will need to create a superuser to access the admin panel using 
+
+        python manage.py createsuperuser
+
+9) Navigate to the admin panel & create the Memberships in order to get the site to function correctly.
+
+10) To launch the project use:
+
+        python3 manage.py runserver
+
+br
+
+### **Heroku Deployment**
+
+br
+
+1) Creating a requirements.txt file, filled with all installed modules.  This can be done by typing the following into the terminal:
+
+        pip freeze  requirements.txt
+
+2) Create a Procfile and add the following code to it: 
+
+        web: gunicorn kindness.wsgi:application
+
+4) Create a project on Heroku. 
+
+5) From the Heroku dashboard of your newly created application, click on "Deploy"  "Deployment method" and select GitHub
+
+6) Confirm the linking of the Heroku app to the correct GitHub repository.
+
+7) Head over to the settings page & click on reveal config vars - You need to set the following config variables: 
+ 
+    AWS_ACCESS_KEY_ID : secret key" 
+    AWS_SECRET_ACCESS_KEY : secret key 
+    AWS_STORAGE_BUCKET_NAME : AWS S3 bucket name 
+    DATABASE_URL : your postgres database url
+    EMAIL_HOST_PASS : your email address password
+    EMAIL_HOST_USER : your email address 
+    SECRET_KEY : django secret key 
+    STRIPE_PUBLIC_KEY : stripe public key
+    STRIPE_SECRET_KEY : stripe secret key 
+    USE_AWS : True 
+
+8) From the terminal in your IDE - 
+    - Migrate the database models
+    - Create your superuser account in your new database
+
+9) In your heroku dashboard, click "Deploy". Scroll down to "Manual Deploy", select the master branch then click "Deploy Branch".
+10) View the app
+12) Navigate to the admin panel & create the Memberships in order to get the site to function correctly.
 
